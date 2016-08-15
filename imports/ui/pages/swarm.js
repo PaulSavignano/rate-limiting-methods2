@@ -6,7 +6,6 @@ import { insertDocument } from '../../api/documents/methods.js'
 const callMethod = (index) => {
   insertDocument.call({ title: `Document #${index + 1}` }, (error) => {
     if (error) {
-      console.log(error)
       Bert.alert(error.reason, 'danger')
     }
   })

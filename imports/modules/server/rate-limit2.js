@@ -11,6 +11,7 @@ DDPRateLimiter.setErrorMessage(({ timeToReset }) => {
 const fetchMethodNames = (methods) => _.pluck(methods, 'name')
 
 const assignLimits = ({ methods, limit, timeRange }) => {
+  console.log('hello!')
   console.log(methods)
   const methodNames = fetchMethodNames(methods)
   DDPRateLimiter.addRule({
@@ -19,4 +20,4 @@ const assignLimits = ({ methods, limit, timeRange }) => {
   }, limit, timeRange)
 }
 
-export const rateLimit = (options) => assignLimits(options)
+export const rateLimit2 = (options) => assignLimits(options)
